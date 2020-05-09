@@ -8,61 +8,54 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="480.0" prefWidth="853.0" style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="home.MainController">
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="853.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.MainController">
     <left>
-        <VBox alignment="CENTER" prefHeight="576.0" prefWidth="187.0" style="-fx-background-color: #7e86ff;"
-              BorderPane.alignment="CENTER">
+        <VBox alignment="CENTER" prefHeight="576.0" prefWidth="187.0" style="-fx-background-color: #d70101;" BorderPane.alignment="CENTER">
             <children>
-                <Button alignment="BOTTOM_LEFT" graphicTextGap="5.0" mnemonicParsing="false"
-                        onMouseClicked="#changeHomeLayout" prefWidth="150.0" text="Home">
+                <Button alignment="BOTTOM_LEFT" graphicTextGap="5.0" mnemonicParsing="false" onMouseClicked="#changeHomeLayout" prefWidth="150.0" text="Home">
                     <VBox.margin>
-                        <Insets top="30.0"/>
+                        <Insets top="30.0" />
                     </VBox.margin>
                     <graphic>
                         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../image/baseline_home_black_18dp.png"/>
+                                <Image url="@../image/baseline_home_black_18dp.png" />
                             </image>
                         </ImageView>
                     </graphic>
 
                 </Button>
-                <Button alignment="BOTTOM_LEFT" graphicTextGap="5.0" mnemonicParsing="false"
-                        onMouseClicked="#changeOrderLayout" prefWidth="150.0" text="Order">
+                <Button alignment="BOTTOM_LEFT" graphicTextGap="5.0" mnemonicParsing="false" onMouseClicked="#changeOrderLayout" prefWidth="150.0" text="Order">
                     <VBox.margin>
-                        <Insets top="30.0"/>
+                        <Insets top="30.0" />
                     </VBox.margin>
                     <graphic>
                         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../image/baseline_reorder_black_18dp.png"/>
+                                <Image url="@../image/baseline_reorder_black_18dp.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button alignment="BOTTOM_LEFT" graphicTextGap="5.0" mnemonicParsing="false"
-                        onMouseClicked="#changeHistoryLayout" prefWidth="150.0" text="History Pemesanan">
+                <Button alignment="BOTTOM_LEFT" graphicTextGap="5.0" mnemonicParsing="false" onMouseClicked="#changeHistoryLayout" prefWidth="150.0" text="History Pemesanan">
                     <VBox.margin>
-                        <Insets top="30.0"/>
+                        <Insets top="30.0" />
                     </VBox.margin>
                     <graphic>
                         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../image/baseline_history_black_18dp.png"/>
+                                <Image url="@../image/baseline_history_black_18dp.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </Button>
             </children>
             <BorderPane.margin>
-                <Insets/>
+                <Insets />
             </BorderPane.margin>
         </VBox>
     </left>
     <center>
-        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
+        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
     </center>
 </BorderPane>

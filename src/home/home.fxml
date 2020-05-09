@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text layoutX="203.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Menu">
+      <ImageView fitHeight="368.0" fitWidth="572.0" layoutY="45.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/K_ON__simple_background_1920x1080.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#d70101" layoutX="203.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Menu">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <Text layoutX="86.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studio Kosong">
+      <Text fill="#d70101" layoutX="86.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studio Kosong">
          <font>
             <Font size="21.0" />
          </font>
       </Text>
-      <Text layoutX="365.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studio Terisi">
+      <Text fill="#d70101" layoutX="365.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studio Terisi">
          <font>
             <Font size="21.0" />
          </font>
       </Text>
-      <TextArea editable="false" layoutX="54.0" layoutY="119.0" prefHeight="200.0" prefWidth="200.0" />
-      <TextArea editable="false" layoutX="322.0" layoutY="118.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextArea editable="false" layoutX="54.0" layoutY="103.0" opacity="0.3" prefHeight="200.0" prefWidth="200.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></TextArea>
+      <TextArea editable="false" layoutX="322.0" layoutY="100.0" opacity="0.3" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
