@@ -31,7 +31,7 @@
             <Font name="Berlin Sans FB" size="21.0" />
          </font>
       </Text>
-      <Text fill="#f5f5f5" layoutX="416.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studio Terisi">
+      <Text fill="#f5f5f5" layoutX="398.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studio Terisi">
          <font>
             <Font name="Berlin Sans FB" size="21.0" />
          </font>
