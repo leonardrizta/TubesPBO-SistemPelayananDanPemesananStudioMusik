@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,8 +34,8 @@ public class MainController implements Initializable {
         mainPane.setCenter(loadUI("history"));
     }
 
-    private HBox loadUI(String filename) {
-        HBox a = null;
+    private Pane loadUI(String filename) {
+        Pane a = null;
         try {
             a = FXMLLoader.load(getClass().getResource(filename + ".fxml"));
         } catch (IOException e) {
