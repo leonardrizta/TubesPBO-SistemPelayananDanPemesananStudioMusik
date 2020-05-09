@@ -16,7 +16,7 @@ public class Main extends Application {
         primaryStage.setTitle("Sistem Pelayanan Dan Pemesanan Studio Musik");
         primaryStage.setScene(new Scene(mainPane, 853, 480));
         primaryStage.show();
-        //TODO "Backend here"
+        //TODO "Do Backend here"
     }
 
 
