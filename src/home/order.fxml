@@ -1,31 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="480.0" prefWidth="670.0">
          <children>
             <BorderPane prefHeight="480.0" prefWidth="666.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <center>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <SplitMenuButton layoutX="159.0" layoutY="184.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Durasi">
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="1 Jam" />
-                            <MenuItem mnemonicParsing="false" text="2 Jam" />
-                              <MenuItem mnemonicParsing="false" text="3 Jam" />
-                              <MenuItem mnemonicParsing="false" text="5 Jam" />
-                          </items>
-                        </SplitMenuButton>
-                        <SplitMenuButton layoutX="159.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Studio">
+                        <Pane>
+                           <children>
+                              <Text layoutX="138.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Menu" textAlignment="CENTER" wrappingWidth="387.65234375">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </top>
+               <bottom>
+                  <HBox BorderPane.alignment="CENTER">
+                     <children>
+                        <Label text="Label" />
+                     </children>
+                  </HBox>
+               </bottom>
+               <left>
+                  <Pane prefHeight="363.0" prefWidth="269.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField layoutX="60.0" layoutY="31.0" promptText="Nama Pelanggan">
+                           <opaqueInsets>
+                              <Insets left="10.0" top="10.0" />
+                           </opaqueInsets>
+                        </TextField>
+                        <SplitMenuButton layoutX="60.0" layoutY="86.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Studio">
                           <items>
                             <MenuItem mnemonicParsing="false" text="Studio 1" />
                             <MenuItem mnemonicParsing="false" text="Studio 2" />
@@ -38,26 +61,32 @@
                               <Insets />
                            </opaqueInsets>
                         </SplitMenuButton>
-                        <TextField layoutX="159.0" layoutY="73.0" promptText="Nama Pelanggan">
-                           <opaqueInsets>
-                              <Insets left="10.0" top="10.0" />
-                           </opaqueInsets>
-                        </TextField>
+                        <SplitMenuButton layoutX="60.0" layoutY="141.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Durasi">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="1 Jam" />
+                            <MenuItem mnemonicParsing="false" text="2 Jam" />
+                              <MenuItem mnemonicParsing="false" text="3 Jam" />
+                              <MenuItem mnemonicParsing="false" text="5 Jam" />
+                          </items>
+                        </SplitMenuButton>
+                        <Button layoutX="86.0" layoutY="207.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="96.0" text="Book" />
                      </children>
-                  </AnchorPane>
-               </center>
-               <top>
-                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-               </top>
-               <left>
-                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+                  </Pane>
                </left>
-               <right>
-                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
-               </right>
-               <bottom>
-                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-               </bottom>
+               <center>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text layoutX="111.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Details">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Pane>
+               </center>
             </BorderPane>
          </children>
       </AnchorPane>
