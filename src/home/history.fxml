@@ -9,32 +9,35 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Circle fill="#d70101" layoutX="233.0" layoutY="28.0" radius="28.0" stroke="TRANSPARENT" strokeType="INSIDE" AnchorPane.topAnchor="0.0" />
-      <VBox alignment="CENTER" layoutX="230.0" prefHeight="56.0" prefWidth="436.0" style="-fx-background-color: #d70101;">
-         <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Order History">
-               <font>
-                  <Font name="Berlin Sans FB" size="30.0" />
-               </font>
-            </Text>
-         </children>
-      </VBox>
-      <HBox alignment="CENTER" layoutY="56.0" prefHeight="424.0" prefWidth="666.0">
-         <children>
-            <TableView prefHeight="424.0" prefWidth="666.0">
-              <columns>
-                <TableColumn prefWidth="35.0" text="No." />
-                <TableColumn prefWidth="125.0" text=" Tanggal dan Waktu" />
-                  <TableColumn prefWidth="100.0" text="Pemesan" />
-                  <TableColumn prefWidth="100.0" text="Studio" />
-                  <TableColumn prefWidth="75.0" text="ID Studio" />
-                  <TableColumn prefWidth="105.0" text="Durasi Main" />
-                  <TableColumn prefWidth="125.0" text="Selesai" />
-              </columns>
-            </TableView>
-         </children>
-      </HBox>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0"
+            prefWidth="666.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Circle fill="#d70101" layoutX="233.0" layoutY="28.0" radius="28.0" stroke="TRANSPARENT" strokeType="INSIDE"
+                AnchorPane.topAnchor="0.0"/>
+        <VBox alignment="CENTER" layoutX="230.0" prefHeight="56.0" prefWidth="436.0"
+              style="-fx-background-color: #d70101;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Order History">
+                    <font>
+                        <Font name="Berlin Sans FB" size="30.0"/>
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+        <HBox alignment="CENTER" layoutY="56.0" prefHeight="424.0" prefWidth="666.0">
+            <children>
+                <TableView prefHeight="424.0" prefWidth="666.0">
+                    <columns>
+                        <TableColumn prefWidth="35.0" text="No."/>
+                        <TableColumn prefWidth="125.0" text=" Tanggal dan Waktu"/>
+                        <TableColumn prefWidth="100.0" text="Pemesan"/>
+                        <TableColumn prefWidth="100.0" text="Studio"/>
+                        <TableColumn prefWidth="75.0" text="ID Studio"/>
+                        <TableColumn prefWidth="105.0" text="Durasi Main"/>
+                        <TableColumn prefWidth="125.0" text="Selesai"/>
+                    </columns>
+                </TableView>
+            </children>
+        </HBox>
+    </children>
 </AnchorPane>
