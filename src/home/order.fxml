@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
@@ -66,28 +66,35 @@
                         <Font size="30.0"/>
                     </font>
                 </Text>
-                <TextArea layoutX="65.0" layoutY="81.0" prefHeight="200.0" prefWidth="200.0"/>
-                <Button layoutX="114.0" layoutY="312.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0"
-                        text="Print"/>
+                <Label fx:id="orderDetail" layoutX="39.0" layoutY="84.0" prefHeight="200.0" prefWidth="250.0"
+                       style="-fx-background-color: white; -fx-background-radius: 8px;"
+                       text="Order Detail Will Show Here">
+                    <padding>
+                        <Insets left="10.0"/>
+                    </padding>
+                </Label>
+                <Button fx:id="bookOrder" accessibleRoleDescription="tt" layoutX="114.0" layoutY="312.0"
+                        mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Book"/>
             </children>
         </AnchorPane>
         <AnchorPane layoutX="1.0" layoutY="80.0" prefHeight="389.0" prefWidth="335.0">
             <children>
-                <TextField layoutX="101.0" layoutY="81.0" promptText="Nama Pelanggan">
+                <TextField fx:id="name" layoutX="101.0" layoutY="81.0" promptText="Nama Pelanggan">
                     <opaqueInsets>
                         <Insets left="10.0" top="10.0"/>
                     </opaqueInsets>
                 </TextField>
-                <Button layoutX="126.0" layoutY="247.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0"
-                        text="Book"/>
+                <Button layoutX="126.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#checkOrder"
+                        prefHeight="35.0" prefWidth="100.0" text="Check Order"/>
                 <Text layoutX="98.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input Order">
                     <font>
                         <Font size="30.0"/>
                     </font>
                 </Text>
                 <ChoiceBox fx:id="studioChoiceBox" layoutX="100.0" layoutY="122.0" prefWidth="150.0"/>
-                <DatePicker layoutX="101.0" layoutY="208.0" prefHeight="25.0" prefWidth="149.0"/>
+                <DatePicker fx:id="orderPlayDate" layoutX="101.0" layoutY="208.0" prefHeight="25.0" prefWidth="149.0"/>
                 <ChoiceBox fx:id="durationChoiceBox" layoutX="101.0" layoutY="164.0" prefWidth="150.0"/>
+                <TextField fx:id="orderPlayTime" layoutX="102.0" layoutY="252.0" promptText="Jam Main"/>
             </children>
         </AnchorPane>
     </children>
