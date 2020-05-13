@@ -6,6 +6,6 @@ Aplikasi ini dibuat menggunakan JavaFX dan MySQL sebagai database servernya
 
 ## Built With Love By:
 
-* [Leonard Rizta Anugerah Perdana] (https://github.com/leonardrizta)
+* [Leonard Rizta Anugerah Perdana](https://github.com/leonardrizta)
 * [Muhammad Tyaz Gagaman](https://github.com/tyaz118140077)
 * [Siraz Tri Denira](https://github.com/deniraz)
