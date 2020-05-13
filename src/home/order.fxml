@@ -12,7 +12,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Circle fill="#e45b5b" layoutX="283.0" layoutY="399.0" opacity="0.1" radius="79.0" stroke="TRANSPARENT" strokeType="INSIDE" />
@@ -61,12 +60,8 @@
             </TextField>
             <SplitMenuButton layoutX="101.0" layoutY="131.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Studio">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Studio 1" />
-                  <MenuItem mnemonicParsing="false" text="Studio 2" />
-                  <MenuItem mnemonicParsing="false" text="Studio 3" />
-                  <MenuItem mnemonicParsing="false" text="Studio 4" />
-                  <MenuItem mnemonicParsing="false" text="Studio 5" />
-                  <MenuItem mnemonicParsing="false" text="Studio 6" />
+                  <MenuItem mnemonicParsing="false" text="Studio Regular" />
+                  <MenuItem mnemonicParsing="false" text="Studio VIP" />
                </items>
                <opaqueInsets>
                   <Insets />
