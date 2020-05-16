@@ -1,21 +1,18 @@
 package home;
 
-import Connectivity.ConnectionClass;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.collections.ObservableList;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class History {
+    private final StringProperty no;
     private final StringProperty tanggalPemesanan;
     private final StringProperty nama;
     private final StringProperty idStudio;
     private final StringProperty tanggalMain;
     private final StringProperty durasiMain;
 
-    public History(String tanggalPemesanan, String nama, String idStudio, String tanggalMain, String durasiMain){
+    public History(String no, String tanggalPemesanan, String nama, String idStudio, String tanggalMain, String durasiMain){
+        this.no = new SimpleStringProperty(no);
         this.tanggalPemesanan = new SimpleStringProperty(tanggalPemesanan);
         this.nama = new SimpleStringProperty(nama);
         this.idStudio = new SimpleStringProperty(idStudio);
@@ -23,7 +20,7 @@ public class History {
         this.durasiMain = new SimpleStringProperty(durasiMain);
     }
 
-
+    public String getNo() { return no.get(); }
     public String getTanggalPesan(){
         return tanggalMain.get();
     }
@@ -58,6 +55,8 @@ public class History {
     public void setDurasiMain(String value){
         durasiMain.set(value);
     }
+
+    public StringProperty no() { return no; }
 
     public StringProperty tanggalPemesananProperty(){
         return tanggalPemesanan;

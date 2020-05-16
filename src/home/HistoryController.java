@@ -50,24 +50,24 @@ public class HistoryController {
     private ObservableList<History> data;
     private ConnectionClass dc;
 
-    public void initialize(URL url, ResourceBundle rb){
-        dc = new ConnectionClass();
-    }
+    public void initialize(URL url, ResourceBundle rb) {  }
 
     @FXML
     public void loadDataFromDataBase(MouseEvent mouseEvent) {
         try {
+            dc = new ConnectionClass();
             Connection conn = dc.getConnection();
             data = FXCollections.observableArrayList();
             //execute query and store result
             ResultSet rs = conn.createStatement().executeQuery("SELECT * FROM studioorder");
             while (rs.next()){
-                data.add(new History(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6)));
+                data.add(new History(rs.getString(1), rs.getString(5), rs.getString(2) ,rs.getString(3), rs.getString(6), rs.getString(7)));
             }
         } catch (SQLException ex){
             System.err.println("Error"+ex);
         }
 
+        columnNo.setCellValueFactory(new PropertyValueFactory<>("no"));
         columnTanggalPesan.setCellValueFactory(new PropertyValueFactory<>("tanggalPemesanan"));
         columnPemesan.setCellValueFactory(new PropertyValueFactory<>("nama"));
         columnStudioId.setCellValueFactory(new PropertyValueFactory<>("idStudio"));
