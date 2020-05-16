@@ -16,7 +16,7 @@ public class History {
     private final StringProperty durasiMain;
 
     public History(String tanggalPemesanan, String nama, String idStudio, String tanggalMain, String durasiMain){
-        this.tanggalMain = new SimpleStringProperty(tanggalMain);
+        this.tanggalPemesanan = new SimpleStringProperty(tanggalPemesanan);
         this.nama = new SimpleStringProperty(nama);
         this.idStudio = new SimpleStringProperty(idStudio);
         this.tanggalMain = new SimpleStringProperty(tanggalMain);
