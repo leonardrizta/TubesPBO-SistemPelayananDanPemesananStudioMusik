@@ -36,6 +36,6 @@
                 </TableView>
             </children>
         </HBox>
-      <Button fx:id="btnRefresh" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#loadDataFromDataBase" text="Refresh" />
+      <Button fx:id="btnRefresh" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#loadDataFromDataBase" text="Refresh" />
     </children>
 </AnchorPane>

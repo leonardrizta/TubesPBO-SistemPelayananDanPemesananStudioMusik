@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -54,7 +55,7 @@ public class HistoryController {
     }
 
     @FXML
-    private void loadDataFromDataBase(ActionEvent event){
+    public void loadDataFromDataBase(MouseEvent mouseEvent) {
         try {
             Connection conn = dc.getConnection();
             data = FXCollections.observableArrayList();
@@ -72,10 +73,7 @@ public class HistoryController {
         columnStudioId.setCellValueFactory(new PropertyValueFactory<>("idStudio"));
         columnTanggalMain.setCellValueFactory(new PropertyValueFactory<>("tanggalMain"));
         columnDurasi.setCellValueFactory(new PropertyValueFactory<>("durasiMain"));
-
         tableDetails.setItems(null);
         tableDetails.setItems(data);
-
-
     }
 }
