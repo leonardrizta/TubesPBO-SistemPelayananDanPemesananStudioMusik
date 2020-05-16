@@ -46,7 +46,7 @@ public class OrderController implements Initializable {
 
     @FXML
     public void checkOrder() {
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         LocalDateTime localDateTime = LocalDateTime.now();
         int price;
         if (studioChoiceBox.getValue().equals("Regular")) {
@@ -68,7 +68,7 @@ public class OrderController implements Initializable {
         ConnectionClass connectionClass = new ConnectionClass();
         Connection connection = connectionClass.getConnection();
 
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         LocalDateTime localDateTime = LocalDateTime.now();
         int price;
         String studio_id;
@@ -80,8 +80,7 @@ public class OrderController implements Initializable {
             studio_id = "V001";
         }
 
-        String sql = "INSERT INTO StudioOrder (name,studio_id,order_price,order_time,order_play,order_finish) VALUES ('"+name.getText()+"','"+studio_id+"',"+price+",'"+dateTimeFormatter.format(localDateTime)+"','"+orderPlayDate.getValue() + " " + orderPlayTime.getText()+"','"+"2020:10:15 23:00:00.000');";
-
+        String sql = "INSERT INTO StudioOrder (name,studio_id,order_price,order_time,order_play,order_finish) VALUES ('" + name.getText() + "','" + studio_id + "'," + price + ",'" + dateTimeFormatter.format(localDateTime) + "','" + orderPlayDate.getValue() + " " + orderPlayTime.getText() + "','" + "2020:10:15 23:00:00.000');";
         Statement statement = connection.createStatement();
         statement.executeUpdate(sql);
     }
