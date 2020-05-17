@@ -53,9 +53,25 @@ public class OrderController implements Initializable {
         LocalDateTime localDateTime = LocalDateTime.now();
         int price;
         if (studioChoiceBox.getValue().equals("Regular")) {
-            price = 50000;
+            if (durationChoiceBox.getValue().equals("1 Jam")){
+                price = 50000;
+            }else if (durationChoiceBox.getValue().equals("2 Jam")){
+                price = 100000;
+            }else if (durationChoiceBox.getValue().equals("3 Jam")){
+                price = 150000;
+            }else{
+                price = 200000;
+            }
         } else {
-            price = 100000;
+            if (durationChoiceBox.getValue().equals("1 Jam")){
+                price = 100000;
+            }else if (durationChoiceBox.getValue().equals("2 Jam")){
+                price = 200000;
+            }else if (durationChoiceBox.getValue().equals("3 Jam")){
+                price = 300000;
+            }else{
+                price = 400000;
+            }
         }
         orderDetail.setText(
                 "Nama Pemesan: \t" + name.getText() + "\n\n" +
@@ -75,11 +91,28 @@ public class OrderController implements Initializable {
         LocalDateTime localDateTime = LocalDateTime.now();
         int price;
         String studio_id;
+        String finishTime = orderPlayTime.getText();
         if (studioChoiceBox.getValue().equals("Regular")) {
-            price = 50000;
+            if (durationChoiceBox.getValue().equals("1 Jam")){
+                price = 50000;
+            }else if (durationChoiceBox.getValue().equals("2 Jam")){
+                price = 100000;
+            }else if (durationChoiceBox.getValue().equals("3 Jam")){
+                price = 150000;
+            }else{
+                price = 200000;
+            }
             studio_id = "R001";
         } else {
-            price = 100000;
+            if (durationChoiceBox.getValue().equals("1 Jam")){
+                price = 100000;
+            }else if (durationChoiceBox.getValue().equals("2 Jam")){
+                price = 200000;
+            }else if (durationChoiceBox.getValue().equals("3 Jam")){
+                price = 300000;
+            }else{
+                price = 400000;
+            }
             studio_id = "V001";
         }
 
