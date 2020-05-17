@@ -5,38 +5,57 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.LoginController">
+<AnchorPane fx:id="loginLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="480.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.LoginController">
     <children>
-        <Circle fill="#e45b5b" layoutX="188.0" layoutY="401.0" opacity="0.2" radius="79.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#e12d2d" layoutX="546.0" layoutY="138.0" opacity="0.2" radius="79.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#ff3232" layoutX="698.0" layoutY="51.0" opacity="0.2" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#dd3636" layoutX="427.0" layoutY="413.0" opacity="0.2" radius="46.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#d70101" layoutX="297.0" layoutY="61.0" opacity="0.2" radius="55.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#d70101" layoutX="518.0" layoutY="353.0" opacity="0.2" radius="28.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#d70101" layoutX="109.0" layoutY="342.0" opacity="0.2" radius="46.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#ee2323" layoutX="438.0" layoutY="76.0" opacity="0.2" radius="35.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#da1818" layoutX="759.0" layoutY="92.0" opacity="0.2" radius="76.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#ff6a6a" layoutX="637.0" layoutY="182.0" opacity="0.2" radius="11.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#f24c4c" layoutX="340.0" layoutY="280.0" opacity="0.2" radius="61.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#e43838" layoutX="169.0" layoutY="193.0" opacity="0.2" radius="52.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#d70101" layoutX="767.0" layoutY="257.0" opacity="0.2" radius="35.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#bc0303" layoutX="711.0" layoutY="353.0" opacity="0.2" radius="113.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <Circle fill="#d70101" layoutX="109.0" layoutY="117.0" opacity="0.2" radius="98.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-        <AnchorPane layoutX="143.0" layoutY="74.0" prefHeight="320.0" prefWidth="568.0" style="-fx-background-color: white; -fx-opacity: 85%; -fx-background-radius: 8px;">
+        <Circle fill="#e45b5b" layoutX="188.0" layoutY="401.0" opacity="0.2" radius="79.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#e12d2d" layoutX="546.0" layoutY="138.0" opacity="0.2" radius="79.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#ff3232" layoutX="698.0" layoutY="51.0" opacity="0.2" radius="20.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#dd3636" layoutX="427.0" layoutY="413.0" opacity="0.2" radius="46.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#d70101" layoutX="297.0" layoutY="61.0" opacity="0.2" radius="55.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#d70101" layoutX="518.0" layoutY="353.0" opacity="0.2" radius="28.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#d70101" layoutX="109.0" layoutY="342.0" opacity="0.2" radius="46.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#ee2323" layoutX="438.0" layoutY="76.0" opacity="0.2" radius="35.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#da1818" layoutX="759.0" layoutY="92.0" opacity="0.2" radius="76.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#ff6a6a" layoutX="637.0" layoutY="182.0" opacity="0.2" radius="11.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#f24c4c" layoutX="340.0" layoutY="280.0" opacity="0.2" radius="61.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#e43838" layoutX="169.0" layoutY="193.0" opacity="0.2" radius="52.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#d70101" layoutX="767.0" layoutY="257.0" opacity="0.2" radius="35.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#bc0303" layoutX="711.0" layoutY="353.0" opacity="0.2" radius="113.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <Circle fill="#d70101" layoutX="109.0" layoutY="117.0" opacity="0.2" radius="98.0" stroke="TRANSPARENT"
+                strokeType="INSIDE"/>
+        <AnchorPane layoutX="143.0" layoutY="74.0" prefHeight="320.0" prefWidth="568.0"
+                    style="-fx-background-color: white; -fx-opacity: 85%; -fx-background-radius: 8px;">
             <children>
-                <Button fx:id="LoginButton" layoutX="255.0" layoutY="226.0" mnemonicParsing="false" onMouseClicked="#actionLogin" text="Login" />
-                <PasswordField fx:id="password" layoutX="210.0" layoutY="180.0" promptText="password" />
-                <TextField fx:id="username" layoutX="210.0" layoutY="148.0" promptText="username" />
-                <Text layoutX="203.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Admin !" textAlignment="CENTER">
+                <Button fx:id="LoginButton" layoutX="255.0" layoutY="226.0" mnemonicParsing="false"
+                        onMouseClicked="#actionLogin" text="Login"/>
+                <PasswordField fx:id="password" layoutX="210.0" layoutY="180.0" promptText="password"/>
+                <TextField fx:id="username" layoutX="210.0" layoutY="148.0" promptText="username"/>
+                <Text layoutX="203.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Admin !"
+                      textAlignment="CENTER">
                     <font>
-                        <Font size="19.0" />
+                        <Font size="19.0"/>
                     </font>
                 </Text>
-            <Label fx:id="notif" layoutX="264.0" layoutY="205.0" />
+                <Label fx:id="loginResult" layoutX="144.0" layoutY="205.0" textAlignment="CENTER"/>
             </children>
         </AnchorPane>
     </children>
