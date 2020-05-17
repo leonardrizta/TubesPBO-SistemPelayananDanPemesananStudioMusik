@@ -94,7 +94,7 @@ public class OrderController implements Initializable {
 
         waktuSelesai.add(Calendar.HOUR_OF_DAY, + durasi);
         Date date = waktuSelesai.getTime();
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String selesai = dateFormat.format(date);
         System.out.println("Converted String: " + selesai);
 
@@ -117,7 +117,28 @@ public class OrderController implements Initializable {
         LocalDateTime localDateTime = LocalDateTime.now();
         int price;
         String studio_id;
-        String finishTime = orderPlayTime.getText();
+
+        Calendar waktuSelesai = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String mulai = orderPlayDate.getValue() + " " + orderPlayTime.getText();
+        try {
+            waktuSelesai.setTime(sdf.parse(mulai));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        int durasi=0;
+
+        if(durationChoiceBox.getValue() == "1 Jam") durasi = 1;
+        else if(durationChoiceBox.getValue() == "2 Jam") durasi = 2;
+        else if(durationChoiceBox.getValue() == "3 Jam") durasi = 3;
+        else if(durationChoiceBox.getValue() == "5 Jam") durasi = 5;
+
+        waktuSelesai.add(Calendar.HOUR_OF_DAY, + durasi);
+        Date date = waktuSelesai.getTime();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String selesai = dateFormat.format(date);
+
         if (studioChoiceBox.getValue().equals("Regular")) {
             if (durationChoiceBox.getValue().equals("1 Jam")){
                 price = 50000;
@@ -142,7 +163,7 @@ public class OrderController implements Initializable {
             studio_id = "V001";
         }
 
-        String sql = "INSERT INTO StudioOrder (name,studio_id,order_price,order_time,order_play,order_finish) VALUES ('" + name.getText() + "','" + studio_id + "'," + price + ",'" + dateTimeFormatter.format(localDateTime) + "','" + orderPlayDate.getValue() + " " + orderPlayTime.getText() + "','" + "2020:10:15 23:00:00.000');";
+        String sql = "INSERT INTO StudioOrder (name,studio_id,order_price,order_time,order_play,order_finish) VALUES ('" + name.getText() + "','" + studio_id + "'," + price + ",'" + dateTimeFormatter.format(localDateTime) + "','" + orderPlayDate.getValue() + " " + orderPlayTime.getText() + "','" + selesai + "');";
         Statement statement = connection.createStatement();
         int check = statement.executeUpdate(sql);
         if(check>0){
