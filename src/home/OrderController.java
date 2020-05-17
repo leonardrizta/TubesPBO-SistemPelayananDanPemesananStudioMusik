@@ -147,11 +147,16 @@ public class OrderController implements Initializable {
 
         String sql = "INSERT INTO StudioOrder (name,studio_id,order_price,order_time,order_play,order_finish) VALUES ('" + name.getText() + "','" + studio_id + "'," + price + ",'" + dateTimeFormatter.format(localDateTime) + "','" + orderPlayDate.getValue() + " " + orderPlayTime.getText() + "','" + selesai + "');";
         Statement statement = connection.createStatement();
-        int check = statement.executeUpdate(sql);
-        if (check > 0) {
-            bookResult.setTextFill(Color.web("#00ff48", 1));
-            bookResult.setText("Booking Berhasil");
-        } else {
+        try {
+            int check = statement.executeUpdate(sql);
+            if (check > 0) {
+                bookResult.setTextFill(Color.web("#00ff48", 1));
+                bookResult.setText("Booking Berhasil");
+            } else {
+                bookResult.setTextFill(Color.web("#ff000a", 1));
+                bookResult.setText("Booking Gagal!");
+            }
+        }catch(Exception e){
             bookResult.setTextFill(Color.web("#ff000a", 1));
             bookResult.setText("Booking Gagal!");
         }
