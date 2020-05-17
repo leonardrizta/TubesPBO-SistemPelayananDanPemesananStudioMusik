@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.paint.Color;
 
 import java.awt.event.ActionEvent;
 import java.net.URL;
@@ -31,6 +32,8 @@ public class OrderController implements Initializable {
     private TextField name;
     @FXML
     private Label orderDetail;
+    @FXML
+    private Label bookResult;
     @FXML
     private DatePicker orderPlayDate;
     @FXML
@@ -82,6 +85,13 @@ public class OrderController implements Initializable {
 
         String sql = "INSERT INTO StudioOrder (name,studio_id,order_price,order_time,order_play,order_finish) VALUES ('" + name.getText() + "','" + studio_id + "'," + price + ",'" + dateTimeFormatter.format(localDateTime) + "','" + orderPlayDate.getValue() + " " + orderPlayTime.getText() + "','" + "2020:10:15 23:00:00.000');";
         Statement statement = connection.createStatement();
-        statement.executeUpdate(sql);
+        int check = statement.executeUpdate(sql);
+        if(check>0){
+            bookResult.setTextFill(Color.web("#00ff48", 1));
+            bookResult.setText("Booking Berhasil");
+        }else{
+            bookResult.setTextFill(Color.web("#ff000a", 1));
+            bookResult.setText("Booking Gagal!");
+        }
     }
 }

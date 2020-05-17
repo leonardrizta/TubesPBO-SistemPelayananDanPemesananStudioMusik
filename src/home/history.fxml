@@ -27,11 +27,11 @@
                 <TableView fx:id="tableDetails" prefHeight="424.0" prefWidth="666.0">
                     <columns>
                         <TableColumn fx:id="columnNo" prefWidth="35.0" text="No." />
-                        <TableColumn fx:id="columnTanggalPesan" prefWidth="150.0" text=" Tanggal Pemesanan" />
-                        <TableColumn fx:id="columnPemesan" prefWidth="125.0" text="Atas Nama" />
-                        <TableColumn fx:id="columnStudioId" prefWidth="100.0" text="ID Studio" />
-                        <TableColumn fx:id="columnTanggalMain" prefWidth="150.0" text="Tanggal Main" />
-                        <TableColumn fx:id="columnDurasi" prefWidth="105.0" text="Durasi Main" />
+                        <TableColumn fx:id="columnTanggalPesan" prefWidth="135.0" text=" Tanggal Pemesanan" />
+                        <TableColumn fx:id="columnPemesan" prefWidth="124.0" text="Atas Nama" />
+                        <TableColumn fx:id="columnStudioId" prefWidth="89.0" text="ID Studio" />
+                        <TableColumn fx:id="columnTanggalMain" prefWidth="142.0" text="Tanggal Main" />
+                        <TableColumn fx:id="columnDurasi" prefWidth="140.0" text="Durasi Main" />
                     </columns>
                 </TableView>
             </children>

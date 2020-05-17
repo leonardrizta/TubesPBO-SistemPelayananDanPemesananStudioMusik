@@ -6,6 +6,7 @@ import javafx.beans.property.StringPropertyBase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -21,7 +22,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class HistoryController {
+public class HistoryController implements Initializable{
     //TODO: connect history to database
     @FXML
     private TableView<History> tableDetails;
@@ -50,10 +51,13 @@ public class HistoryController {
     private ObservableList<History> data;
     private ConnectionClass dc;
 
-    public void initialize(URL url, ResourceBundle rb) {  }
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        loadDataFromDataBase();
+    }
 
     @FXML
-    public void loadDataFromDataBase(MouseEvent mouseEvent) {
+    public void loadDataFromDataBase() {
         try {
             dc = new ConnectionClass();
             Connection conn = dc.getConnection();

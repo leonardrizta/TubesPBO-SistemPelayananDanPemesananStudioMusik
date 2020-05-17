@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,80 +10,70 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0"
-            prefWidth="666.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.HomeController">
     <children>
-        <Circle fill="#e45b5b" layoutX="283.0" layoutY="399.0" radius="79.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#e12d2d" layoutX="535.0" layoutY="121.0" radius="46.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#ff3232" layoutX="537.0" layoutY="168.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#dd3636" layoutX="412.0" layoutY="402.0" radius="41.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#d70101" layoutX="602.0" layoutY="230.0" radius="37.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#d70101" layoutX="233.0" layoutY="28.0" radius="28.0" stroke="TRANSPARENT" strokeType="INSIDE"
-                AnchorPane.topAnchor="0.0"/>
-        <Circle fill="#d70101" layoutX="53.0" layoutY="430.0" radius="46.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#ee2323" layoutX="338.0" layoutY="153.0" radius="25.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#da1818" layoutX="399.0" layoutY="202.0" radius="61.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#ff6a6a" layoutX="51.0" layoutY="167.0" radius="11.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#f24c4c" layoutX="270.0" layoutY="263.0" radius="33.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#e43838" layoutX="99.0" layoutY="107.0" radius="52.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#d70101" layoutX="66.0" layoutY="174.0" radius="16.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#bc0303" layoutX="539.0" layoutY="353.0" radius="113.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#d70101" layoutX="166.0" layoutY="180.0" radius="98.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Text fill="WHITE" layoutX="104.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studio Kosong">
+        <Circle fill="#e45b5b" layoutX="283.0" layoutY="399.0" radius="79.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#e12d2d" layoutX="535.0" layoutY="121.0" radius="46.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#ff3232" layoutX="537.0" layoutY="168.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#dd3636" layoutX="412.0" layoutY="402.0" radius="41.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#d70101" layoutX="602.0" layoutY="230.0" radius="37.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#d70101" layoutX="233.0" layoutY="28.0" radius="28.0" stroke="TRANSPARENT" strokeType="INSIDE" AnchorPane.topAnchor="0.0" />
+        <Circle fill="#d70101" layoutX="53.0" layoutY="430.0" radius="46.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#ee2323" layoutX="338.0" layoutY="153.0" radius="25.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#da1818" layoutX="399.0" layoutY="202.0" radius="61.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#ff6a6a" layoutX="51.0" layoutY="167.0" radius="11.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#f24c4c" layoutX="270.0" layoutY="263.0" radius="33.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#e43838" layoutX="99.0" layoutY="107.0" radius="52.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#d70101" layoutX="66.0" layoutY="174.0" radius="16.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#bc0303" layoutX="539.0" layoutY="353.0" radius="113.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#d70101" layoutX="166.0" layoutY="180.0" radius="98.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Text fill="WHITE" layoutX="104.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studio Regular">
             <font>
-                <Font name="Berlin Sans FB" size="21.0"/>
+                <Font name="Berlin Sans FB" size="21.0" />
             </font>
         </Text>
-        <Text fill="#f5f5f5" layoutX="487.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studio Terisi"
-              wrappingWidth="111.27197265625">
+        <Text fill="#f5f5f5" layoutX="487.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studio VIP" wrappingWidth="111.27197265625">
             <font>
-                <Font name="Berlin Sans FB" size="21.0"/>
+                <Font name="Berlin Sans FB" size="21.0" />
             </font>
         </Text>
-        <VBox alignment="CENTER" layoutX="230.0" prefHeight="56.0" prefWidth="436.0"
-              style="-fx-background-color: #d70101;">
+        <VBox alignment="CENTER" layoutX="230.0" prefHeight="56.0" prefWidth="436.0" style="-fx-background-color: #d70101;">
             <children>
                 <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Menu">
                     <font>
-                        <Font name="Berlin Sans FB" size="30.0"/>
+                        <Font name="Berlin Sans FB" size="30.0" />
                     </font>
                 </Text>
             </children>
         </VBox>
         <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="155.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../image/guitar_tr.png"/>
+                <Image url="@../image/guitar_tr.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="159.0" fitWidth="169.0" layoutX="204.0" layoutY="319.0" pickOnBounds="true"
-                   preserveRatio="true">
+        <ImageView fitHeight="159.0" fitWidth="169.0" layoutX="204.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../image/drum_tr.png"/>
+                <Image url="@../image/drum_tr.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="133.0" fitWidth="169.0" layoutX="483.0" layoutY="64.0" nodeOrientation="RIGHT_TO_LEFT"
-                   pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="133.0" fitWidth="169.0" layoutX="483.0" layoutY="64.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../image/bass_tr.png"/>
+                <Image url="@../image/bass_tr.png" />
             </image>
         </ImageView>
-        <Circle fill="#dd1d1d" layoutX="82.0" layoutY="331.0" radius="41.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Circle fill="#e44a4a" layoutX="142.0" layoutY="402.0" radius="28.0" stroke="TRANSPARENT" strokeType="INSIDE"/>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="113.0" layoutX="114.0" layoutY="137.0"
-                   opacity="0.14" stroke="#a1626200" strokeType="INSIDE" width="104.0"/>
-        <Text fill="WHITE" layoutX="144.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0"
-              textAlignment="CENTER">
-            <font>
-                <Font name="Berlin Sans FB" size="74.0"/>
-            </font>
-        </Text>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="122.0" layoutX="485.0" layoutY="307.0"
-                   opacity="0.11" stroke="#a1626200" strokeType="INSIDE" width="111.0"/>
-        <Text fill="WHITE" layoutX="519.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0"
-              textAlignment="CENTER">
-            <font>
-                <Font name="Berlin Sans FB" size="74.0"/>
-            </font>
-        </Text>
+        <Circle fill="#dd1d1d" layoutX="82.0" layoutY="331.0" radius="41.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Circle fill="#e44a4a" layoutX="142.0" layoutY="402.0" radius="28.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="113.0" layoutX="114.0" layoutY="137.0" opacity="0.14" stroke="#a1626200" strokeType="INSIDE" width="104.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="122.0" layoutX="485.0" layoutY="307.0" opacity="0.11" stroke="#a1626200" strokeType="INSIDE" width="111.0" />
+      <Label fx:id="resultRegular" layoutX="144.0" layoutY="147.0" text="0">
+         <font>
+            <Font name="Berlin Sans FB" size="74.0" />
+         </font>
+      </Label>
+      <Label fx:id="resultVip" layoutX="519.0" layoutY="321.0" text="0">
+         <font>
+            <Font name="Berlin Sans FB" size="74.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
