@@ -144,21 +144,25 @@ public class OrderController implements Initializable {
             }
             studio_id = "V001";
         }
-
-        String sql = "INSERT INTO StudioOrder (name,studio_id,order_price,order_time,order_play,order_finish) VALUES ('" + name.getText() + "','" + studio_id + "'," + price + ",'" + dateTimeFormatter.format(localDateTime) + "','" + orderPlayDate.getValue() + " " + orderPlayTime.getText() + "','" + selesai + "');";
-        Statement statement = connection.createStatement();
-        try {
-            int check = statement.executeUpdate(sql);
-            if (check > 0) {
-                bookResult.setTextFill(Color.web("#00ff48", 1));
-                bookResult.setText("Booking Berhasil");
-            } else {
+        if(name.getText().trim().length()==0||orderPlayDate.getValue().toString().trim().length()==0||orderPlayTime.getText().toString().trim().length()!=8){
+            bookResult.setTextFill(Color.web("#ff000a", 1));
+            bookResult.setText("Booking Gagal!");
+        }else {
+            String sql = "INSERT INTO StudioOrder (name,studio_id,order_price,order_time,order_play,order_finish) VALUES ('" + name.getText() + "','" + studio_id + "'," + price + ",'" + dateTimeFormatter.format(localDateTime) + "','" + orderPlayDate.getValue() + " " + orderPlayTime.getText() + "','" + selesai + "');";
+            Statement statement = connection.createStatement();
+            try {
+                int check = statement.executeUpdate(sql);
+                if (check > 0) {
+                    bookResult.setTextFill(Color.web("#00ff48", 1));
+                    bookResult.setText("Booking Berhasil");
+                } else {
+                    bookResult.setTextFill(Color.web("#ff000a", 1));
+                    bookResult.setText("Booking Gagal!");
+                }
+            } catch (Exception e) {
                 bookResult.setTextFill(Color.web("#ff000a", 1));
                 bookResult.setText("Booking Gagal!");
             }
-        }catch(Exception e){
-            bookResult.setTextFill(Color.web("#ff000a", 1));
-            bookResult.setText("Booking Gagal!");
         }
     }
 }
