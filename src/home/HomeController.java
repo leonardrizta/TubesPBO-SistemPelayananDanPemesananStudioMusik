@@ -25,28 +25,23 @@ public class HomeController implements Initializable {
     private Label result_vip;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        loadDataFromDataBase();
+        loadDataFromDataBase();
     }
-//    @FXML
-//    public void loadDataFromDataBase() {
-//        ConnectionClass connectionClass = new ConnectionClass();
-//        Connection connection = connectionClass.getConnection();
-//        String sqlRegular = "select count(order_id) from studioorder where studio_id='R001'";
-//        String sqlVip = "select count(order_id) from studioorder where studio_id='V001'";
-//        Statement statement = null;
-//        try {
-//            statement = connection.createStatement();
-//            statement.executeUpdate(sqlRegular);
-//            resultRegular.setText(Objects.requireNonNull(statement).getResultSet().toString());
-//            statement.executeUpdate(sqlVip);
-//            resultVip.setText(Objects.requireNonNull(statement).getResultSet().toString());
-//        } catch (SQLException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        try {
-//            resultRegular.setText(Objects.requireNonNull(statement).getResultSet().toString());
-//        } catch (SQLException throwables) {
-//            throwables.printStackTrace();
-//        }
-//    }
+    @FXML
+    public void loadDataFromDataBase() {
+        ConnectionClass connectionClass = new ConnectionClass();
+        Connection connection = connectionClass.getConnection();
+        String sqlRegular = "select count(order_id) from studioorder where studio_id='R001'";
+        String sqlVip = "select count(order_id) from studioorder where studio_id='V001'";
+        Statement statement = null;
+        try {
+            statement = connection.createStatement();
+            statement.executeQuery(sqlRegular);
+            result_regular.setText(Objects.requireNonNull(statement).getResultSet().toString());
+            statement.executeQuery(sqlVip);
+            result_vip.setText(Objects.requireNonNull(statement).getResultSet().toString());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }
