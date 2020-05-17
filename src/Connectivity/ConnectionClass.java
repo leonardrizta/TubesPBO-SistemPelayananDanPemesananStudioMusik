@@ -7,7 +7,7 @@ public class ConnectionClass {
     public Connection connection;
 
     public Connection getConnection() {
-        String url = "jdbc:mysql://localhost:3306/studiomusik";
+        String url = "jdbc:mysql://localhost:3306/studiomusik?serverTimezone=UTC";
         String username = "root";
         String password = "";
 
