@@ -13,11 +13,15 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -73,12 +77,34 @@ public class OrderController implements Initializable {
                 price = 400000;
             }
         }
+
+        Calendar waktuSelesai = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        String mulai = orderPlayDate.getValue() + " " + orderPlayTime.getText();
+        try {
+            waktuSelesai.setTime(sdf.parse(mulai));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        int durasi=0;
+        if(durationChoiceBox.getValue() == "1 Jam") durasi = 1;
+        else if(durationChoiceBox.getValue() == "2 Jam") durasi = 2;
+        else if(durationChoiceBox.getValue() == "3 Jam") durasi = 3;
+        else if(durationChoiceBox.getValue() == "5 Jam") durasi = 5;
+
+        waktuSelesai.add(Calendar.HOUR_OF_DAY, + durasi);
+        Date date = waktuSelesai.getTime();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        String selesai = dateFormat.format(date);
+        System.out.println("Converted String: " + selesai);
+
         orderDetail.setText(
                 "Nama Pemesan: \t" + name.getText() + "\n\n" +
                         "Jenis Studio:\t\t" + studioChoiceBox.getValue() + "\n\n" +
                         "Durasi Main:\t\t" + durationChoiceBox.getValue() + "\n\n" +
                         "Biaya: \t\t\t" + price + "\n\n" +
-                        "Tanggal Main:\t\t" + orderPlayDate.getValue() + " " + orderPlayTime.getText() + "\n\n" +
+                        "Tanggal Main:\t\t" + mulai + "\n" +
+                        "Waktu Selesai:\t\t" + selesai + "\n" +
                         "Tanggal Order:\t" + dateTimeFormatter.format(localDateTime)
         );
     }
