@@ -118,7 +118,7 @@ public class OrderController implements Initializable {
         LocalDateTime localDateTime = LocalDateTime.now();
         int price;
         String studio_id;
-        String finishTime = orderPlayTime.getText();
+
         if (studioChoiceBox.getValue().equals("Regular")) {
             if (durationChoiceBox.getValue().equals("1 Jam")) {
                 price = 50000;
