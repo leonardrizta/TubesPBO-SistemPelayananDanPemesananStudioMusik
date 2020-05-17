@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class HistoryController implements Initializable{
+public class HistoryController implements Initializable {
     //TODO: connect history to database
     @FXML
     private TableView<History> tableDetails;
@@ -64,11 +64,11 @@ public class HistoryController implements Initializable{
             data = FXCollections.observableArrayList();
             //execute query and store result
             ResultSet rs = conn.createStatement().executeQuery("SELECT * FROM studioorder");
-            while (rs.next()){
-                data.add(new History(rs.getString(1), rs.getString(5), rs.getString(2) ,rs.getString(3), rs.getString(6), rs.getString(7)));
+            while (rs.next()) {
+                data.add(new History(rs.getString(1), rs.getString(5), rs.getString(2), rs.getString(3), rs.getString(6), rs.getString(7)));
             }
-        } catch (SQLException ex){
-            System.err.println("Error"+ex);
+        } catch (SQLException ex) {
+            System.err.println("Error" + ex);
         }
 
         columnNo.setCellValueFactory(new PropertyValueFactory<>("no"));

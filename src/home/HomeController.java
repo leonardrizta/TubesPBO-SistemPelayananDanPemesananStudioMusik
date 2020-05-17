@@ -20,26 +20,37 @@ import java.util.ResourceBundle;
 
 public class HomeController implements Initializable {
     @FXML
-    private Label result_regular;
+    private Label resultRegular;
     @FXML
-    private Label result_vip;
+    private Label resultVip;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadDataFromDataBase();
     }
+
     @FXML
     public void loadDataFromDataBase() {
+        ResultSet resultSet;
         ConnectionClass connectionClass = new ConnectionClass();
         Connection connection = connectionClass.getConnection();
-        String sqlRegular = "select count(order_id) from studioorder where studio_id='R001'";
-        String sqlVip = "select count(order_id) from studioorder where studio_id='V001'";
+        String sqlRegular = "select count(order_id) as totalRegular from studioorder where studio_id='R001';";
+        String sqlVip = "select count(order_id) as totalVip from studioorder where studio_id='V001';";
         Statement statement = null;
         try {
             statement = connection.createStatement();
-            statement.executeQuery(sqlRegular);
-            result_regular.setText(Objects.requireNonNull(statement).getResultSet().toString());
+            resultSet = statement.executeQuery(sqlRegular);
+            resultSet.next();
+            resultRegular.setText(resultSet.getString(1));
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        try {
+            statement = connection.createStatement();
             statement.executeQuery(sqlVip);
-            result_vip.setText(Objects.requireNonNull(statement).getResultSet().toString());
+            resultSet = statement.executeQuery(sqlVip);
+            resultSet.next();
+            resultVip.setText(resultSet.getString(1));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

@@ -11,7 +11,7 @@ public class History {
     private final StringProperty tanggalMain;
     private final StringProperty durasiMain;
 
-    public History(String no, String tanggalPemesanan, String nama, String idStudio, String tanggalMain, String durasiMain){
+    public History(String no, String tanggalPemesanan, String nama, String idStudio, String tanggalMain, String durasiMain) {
         this.no = new SimpleStringProperty(no);
         this.tanggalPemesanan = new SimpleStringProperty(tanggalPemesanan);
         this.nama = new SimpleStringProperty(nama);
@@ -20,15 +20,19 @@ public class History {
         this.durasiMain = new SimpleStringProperty(durasiMain);
     }
 
-    public String getNo() { return no.get(); }
-    public String getTanggalPesan(){
+    public String getNo() {
+        return no.get();
+    }
+
+    public String getTanggalPesan() {
         return tanggalMain.get();
     }
 
     public String getNama() {
         return nama.get();
     }
-    public String getIdStudio(){
+
+    public String getIdStudio() {
         return idStudio.get();
     }
 
@@ -40,25 +44,31 @@ public class History {
         return durasiMain.get();
     }
 
-    public void setTanggalPemesanan(String value){
+    public void setTanggalPemesanan(String value) {
         tanggalPemesanan.set(value);
     }
-    public void setNama(String value){
+
+    public void setNama(String value) {
         nama.set(value);
     }
-    public void setIdStudio(String value){
+
+    public void setIdStudio(String value) {
         idStudio.set(value);
     }
-    public void setTanggalMain(String value){
+
+    public void setTanggalMain(String value) {
         tanggalMain.set(value);
     }
-    public void setDurasiMain(String value){
+
+    public void setDurasiMain(String value) {
         durasiMain.set(value);
     }
 
-    public StringProperty no() { return no; }
+    public StringProperty no() {
+        return no;
+    }
 
-    public StringProperty tanggalPemesananProperty(){
+    public StringProperty tanggalPemesananProperty() {
         return tanggalPemesanan;
     }
 
