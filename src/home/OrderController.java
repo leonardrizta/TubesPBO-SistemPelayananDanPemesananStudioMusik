@@ -53,23 +53,23 @@ public class OrderController implements Initializable {
         LocalDateTime localDateTime = LocalDateTime.now();
         int price;
         if (studioChoiceBox.getValue().equals("Regular")) {
-            if (durationChoiceBox.getValue().equals("1 Jam")) {
+            if (durationChoiceBox.getValue().equals("1 Jam")){
                 price = 50000;
-            } else if (durationChoiceBox.getValue().equals("2 Jam")) {
+            }else if (durationChoiceBox.getValue().equals("2 Jam")){
                 price = 100000;
-            } else if (durationChoiceBox.getValue().equals("3 Jam")) {
+            }else if (durationChoiceBox.getValue().equals("3 Jam")){
                 price = 150000;
-            } else {
+            }else{
                 price = 200000;
             }
         } else {
-            if (durationChoiceBox.getValue().equals("1 Jam")) {
+            if (durationChoiceBox.getValue().equals("1 Jam")){
                 price = 100000;
-            } else if (durationChoiceBox.getValue().equals("2 Jam")) {
+            }else if (durationChoiceBox.getValue().equals("2 Jam")){
                 price = 200000;
-            } else if (durationChoiceBox.getValue().equals("3 Jam")) {
+            }else if (durationChoiceBox.getValue().equals("3 Jam")){
                 price = 300000;
-            } else {
+            }else{
                 price = 400000;
             }
         }
@@ -93,24 +93,24 @@ public class OrderController implements Initializable {
         String studio_id;
         String finishTime = orderPlayTime.getText();
         if (studioChoiceBox.getValue().equals("Regular")) {
-            if (durationChoiceBox.getValue().equals("1 Jam")) {
+            if (durationChoiceBox.getValue().equals("1 Jam")){
                 price = 50000;
-            } else if (durationChoiceBox.getValue().equals("2 Jam")) {
+            }else if (durationChoiceBox.getValue().equals("2 Jam")){
                 price = 100000;
-            } else if (durationChoiceBox.getValue().equals("3 Jam")) {
+            }else if (durationChoiceBox.getValue().equals("3 Jam")){
                 price = 150000;
-            } else {
+            }else{
                 price = 200000;
             }
             studio_id = "R001";
         } else {
-            if (durationChoiceBox.getValue().equals("1 Jam")) {
+            if (durationChoiceBox.getValue().equals("1 Jam")){
                 price = 100000;
-            } else if (durationChoiceBox.getValue().equals("2 Jam")) {
+            }else if (durationChoiceBox.getValue().equals("2 Jam")){
                 price = 200000;
-            } else if (durationChoiceBox.getValue().equals("3 Jam")) {
+            }else if (durationChoiceBox.getValue().equals("3 Jam")){
                 price = 300000;
-            } else {
+            }else{
                 price = 400000;
             }
             studio_id = "V001";
@@ -119,10 +119,10 @@ public class OrderController implements Initializable {
         String sql = "INSERT INTO StudioOrder (name,studio_id,order_price,order_time,order_play,order_finish) VALUES ('" + name.getText() + "','" + studio_id + "'," + price + ",'" + dateTimeFormatter.format(localDateTime) + "','" + orderPlayDate.getValue() + " " + orderPlayTime.getText() + "','" + "2020:10:15 23:00:00.000');";
         Statement statement = connection.createStatement();
         int check = statement.executeUpdate(sql);
-        if (check > 0) {
+        if(check>0){
             bookResult.setTextFill(Color.web("#00ff48", 1));
             bookResult.setText("Booking Berhasil");
-        } else {
+        }else{
             bookResult.setTextFill(Color.web("#ff000a", 1));
             bookResult.setText("Booking Gagal!");
         }
