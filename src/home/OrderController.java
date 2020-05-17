@@ -28,6 +28,7 @@ import java.util.ResourceBundle;
 public class OrderController implements Initializable {
     ObservableList<String> studioChoiceList = FXCollections.observableArrayList("Regular", "VIP");
     ObservableList<String> durationChoiceList = FXCollections.observableArrayList("1 Jam", "2 Jam", "3 Jam", "5 Jam");
+    String selesai;
     @FXML
     private ChoiceBox<String> studioChoiceBox;
     @FXML
@@ -79,7 +80,7 @@ public class OrderController implements Initializable {
         }
 
         Calendar waktuSelesai = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String mulai = orderPlayDate.getValue() + " " + orderPlayTime.getText();
         try {
             waktuSelesai.setTime(sdf.parse(mulai));
@@ -94,8 +95,8 @@ public class OrderController implements Initializable {
 
         waktuSelesai.add(Calendar.HOUR_OF_DAY, + durasi);
         Date date = waktuSelesai.getTime();
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        String selesai = dateFormat.format(date);
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        selesai = dateFormat.format(date);
         System.out.println("Converted String: " + selesai);
 
         orderDetail.setText(
@@ -142,7 +143,7 @@ public class OrderController implements Initializable {
             studio_id = "V001";
         }
 
-        String sql = "INSERT INTO StudioOrder (name,studio_id,order_price,order_time,order_play,order_finish) VALUES ('" + name.getText() + "','" + studio_id + "'," + price + ",'" + dateTimeFormatter.format(localDateTime) + "','" + orderPlayDate.getValue() + " " + orderPlayTime.getText() + "','" + "2020:10:15 23:00:00.000');";
+        String sql = "INSERT INTO StudioOrder (name,studio_id,order_price,order_time,order_play,order_finish) VALUES ('" + name.getText() + "','" + studio_id + "'," + price + ",'" + dateTimeFormatter.format(localDateTime) + "','" + orderPlayDate.getValue() + " " + orderPlayTime.getText() + "','" + selesai + "');";
         Statement statement = connection.createStatement();
         int check = statement.executeUpdate(sql);
         if (check > 0) {
