@@ -56,26 +56,34 @@ public class OrderController implements Initializable {
     public void checkOrder() {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         LocalDateTime localDateTime = LocalDateTime.now();
-        int price;
+        int price, durasi;
         if (studioChoiceBox.getValue().equals("Regular")) {
             if (durationChoiceBox.getValue().equals("1 Jam")) {
                 price = 50000;
+                durasi = 1;
             } else if (durationChoiceBox.getValue().equals("2 Jam")) {
                 price = 100000;
+                durasi = 2;
             } else if (durationChoiceBox.getValue().equals("3 Jam")) {
                 price = 150000;
+                durasi = 3;
             } else {
                 price = 200000;
+                durasi = 5;
             }
         } else {
             if (durationChoiceBox.getValue().equals("1 Jam")) {
                 price = 100000;
+                durasi = 1;
             } else if (durationChoiceBox.getValue().equals("2 Jam")) {
                 price = 200000;
+                durasi = 2;
             } else if (durationChoiceBox.getValue().equals("3 Jam")) {
                 price = 300000;
+                durasi = 3;
             } else {
                 price = 400000;
+                durasi = 5;
             }
         }
 
@@ -87,11 +95,6 @@ public class OrderController implements Initializable {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        int durasi=0;
-        if(durationChoiceBox.getValue() == "1 Jam") durasi = 1;
-        else if(durationChoiceBox.getValue() == "2 Jam") durasi = 2;
-        else if(durationChoiceBox.getValue() == "3 Jam") durasi = 3;
-        else if(durationChoiceBox.getValue() == "5 Jam") durasi = 5;
 
         waktuSelesai.add(Calendar.HOUR_OF_DAY, + durasi);
         Date date = waktuSelesai.getTime();
